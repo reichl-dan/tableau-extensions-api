@@ -17,5 +17,12 @@ export const dashboard = tableau.extensions.dashboardContent.dashboard
 // export tableau enums
 export const Tableau = { ...tableau, extensions: void 0 }
 
+// Export all types from the type definitions
+// This allows importing types directly in TypeScript files
+export type {
+  MarkInfo,
+  // Add other types here as needed
+} from '../types/globals.d.ts
+
 // remove global reference
 window.tableau = void 0
