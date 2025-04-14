@@ -5,7 +5,7 @@
   "author": "Dan Reichl <reichl.daniel.p@gmail.com>",
   "license": "MIT",
   "main": "dist/main.js",
-  "types": "dist/types.d.ts",
+  "types": "dist/main.d.ts",
   "files": ["dist/", "vendor/"],
   "keywords": ["tableau", "extensions", "api", "wrapper"],
   "repository": {

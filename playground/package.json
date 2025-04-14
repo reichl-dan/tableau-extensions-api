@@ -9,6 +9,5 @@
   },
   "dependencies": {
     "tableau-extensions-api": "workspace:*"
-  },
-  "devDependencies": {}
+  }
 }

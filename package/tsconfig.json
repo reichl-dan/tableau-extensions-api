@@ -16,5 +16,5 @@
     "verbatimModuleSyntax": true
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "vendor", "dist"]
+  "exclude": ["node_modules", "vendor"]
 }
