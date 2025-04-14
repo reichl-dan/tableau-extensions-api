@@ -34,7 +34,8 @@
       "**/dist/**",
       "**/.git/**",
       "**/.pnpm-store/**",
-      "**/pnpm-lock.yaml"
+      "**/pnpm-lock.yaml",
+      "**/vendor/**"
     ]
   }
 }

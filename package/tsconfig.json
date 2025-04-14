@@ -15,12 +15,6 @@
     "checkJs": true,
     "verbatimModuleSyntax": true
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "vendor",
-    "dist"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "vendor", "dist"]
 }

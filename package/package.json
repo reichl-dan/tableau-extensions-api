@@ -6,16 +6,8 @@
   "license": "MIT",
   "main": "dist/main.js",
   "types": "dist/types.d.ts",
-  "files": [
-    "dist/",
-    "vendor/"
-  ],
-  "keywords": [
-    "tableau",
-    "extensions",
-    "api",
-    "wrapper"
-  ],
+  "files": ["dist/", "vendor/"],
+  "keywords": ["tableau", "extensions", "api", "wrapper"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/reichl-dan/tableau-extensions-api.git"
