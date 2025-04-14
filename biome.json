@@ -25,17 +25,16 @@
   "javascript": {
     "formatter": {
       "quoteStyle": "single",
-      "semicolons": "asNeeded",
-      "trailingCommas": "all"
+      "semicolons": "asNeeded"
     }
   },
   "files": {
     "ignore": [
       "**/node_modules/**",
+      "**/dist/**",
       "**/.git/**",
       "**/.pnpm-store/**",
-      "**/pnpm-lock.yaml",
-      "**/tableau.extensions.1.latest.min.js"
+      "**/pnpm-lock.yaml"
     ]
   }
 }

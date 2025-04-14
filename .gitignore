@@ -6,6 +6,7 @@
 # Logs
 *.log
 *.log.*
+*.tap/
 
 # Temp
 **/.temp/
@@ -24,9 +25,6 @@ _MACOSX/
 # Windows
 ehthumbs.db
 Thumbs.db
-
-# TypeScript
-*.tsbuildinfo
 
 # Build
 dist/

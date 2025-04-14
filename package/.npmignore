@@ -25,13 +25,5 @@ _MACOSX/
 ehthumbs.db
 Thumbs.db
 
-# TypeScript
-*.tsbuildinfo
-
 # Development
-.devcontainer/
-.git/
-biome.json
-pnpm-lock.yaml
-test/
-tsconfig.json
+/tsconfig.json
