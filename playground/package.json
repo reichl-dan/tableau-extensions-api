@@ -1,0 +1,13 @@
+{
+  "name": "playground",
+  "description": "Test environment for tableau-extensions-api",
+  "main": "index.ts",
+  "scripts": {
+    "check": "biome check . --write",
+    "ci": "biome ci .",
+    "clean": "rm -rf node_modules"
+  },
+  "dependencies": {
+    "tableau-extensions-api": "workspace:*"
+  }
+}

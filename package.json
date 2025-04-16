@@ -1,33 +1,16 @@
 {
-  "name": "tableau-extensions-api",
-  "version": "0.0.3",
-  "description": "A wrapper around the Tableau Extensions API",
-  "author": "Dan Reichl <reichl.daniel.p@gmail.com>",
+  "name": "root",
+  "private": true,
   "license": "MIT",
-  "main": "main/",
-  "types": "main/index.d.ts",
-  "files": [
-    "main/",
-    "types/"
-  ],
-  "keywords": [
-    "tableau",
-    "extensions",
-    "api",
-    "wrapper"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/reichl-dan/tableau-extensions-api.git"
-  },
+  "type": "module",
   "scripts": {
-    "check": "biome check . --write"
+    "build": "pnpm -r run build",
+    "check": "pnpm -r run check",
+    "ci": "pnpm -r run ci",
+    "clean": "pnpm -r run clean && rm -rf node_modules",
+    "test": "pnpm --filter playground run test"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.4",
-    "typescript": "5.8.3",
-    "@pulumi/pulumi": "3.162.0",
-    "vue": "3.5.13",
-    "fastify": "5.2.2"
+    "@biomejs/biome": "1.9.4"
   }
 }

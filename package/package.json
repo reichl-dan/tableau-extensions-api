@@ -1,0 +1,25 @@
+{
+  "name": "tableau-extensions-api",
+  "version": "0.0.4",
+  "description": "A wrapper around the Tableau Extensions API",
+  "author": "Dan Reichl <reichl.daniel.p@gmail.com>",
+  "license": "MIT",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
+  "files": ["dist/", "vendor/"],
+  "keywords": ["tableau", "extensions", "api", "wrapper"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reichl-dan/tableau-extensions-api.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "check": "biome check . --write && tsc --noEmit",
+    "ci": "biome ci . && tsc --noEmit",
+    "clean": "rm -rf node_modules dist",
+    "prebuild": "rm -rf dist"
+  },
+  "devDependencies": {
+    "typescript": "5.8.2"
+  }
+}
