@@ -1,5 +1,5 @@
-import type { TableauWorksheetEvent } from './tableauWorksheetEvent'
 import type { MarksCollection } from './marksCollection'
+import type { TableauWorksheetEvent } from './tableauWorksheetEvent'
 
 /**
  * An event which is raised when marks are selected on a worksheet.

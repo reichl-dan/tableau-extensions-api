@@ -1,12 +1,10 @@
 import type * as Enums from '../enums/_enums'
-import type { Sheet } from './sheet'
 import type { DashboardObject } from './dashboardObject'
-import type { Filter } from './filter'
-import type { Parameter } from './parameter'
-import type { Worksheet } from './worksheet'
 import type { DashboardObjectPositionAndSizeUpdateArray } from './dashboardObjectPositionAndSizeUpdateArray'
 import type { DashboardObjectVisibilityMap } from './dashboardObjectVisibilityMap'
-import type { ZoneVisibilityMap } from './zoneVisibilityMap'
+import type { Filter } from './filter'
+import type { Sheet } from './sheet'
+import type { Worksheet } from './worksheet'
 
 /**
  * Represents a dashboard in Tableau.
@@ -25,14 +23,14 @@ export interface Dashboard extends Sheet {
   /**
    * The collection of objects contained in the dashboard.
    */
-  objects: Array<DashboardObject>
+  objects: DashboardObject[]
 
   /**
    * The collection of worksheets contained in the dashboard.
    * This is a helper method and is equivalent to looping through all of the objects in a dashboard and collecting all of the objects whose type is worksheet.
    * You can use this property to iterate through all of the worksheets in the dashboard.
    */
-  worksheets: Array<Worksheet>
+  worksheets: Worksheet[]
 
   /**
    * Gets the dashboard object with the specified ID.
@@ -45,7 +43,7 @@ export interface Dashboard extends Sheet {
    * Gets all the filters used by the dashboard.
    * @returns The collection of filters used on the dashboard
    */
-  getFiltersAsync(): Promise<Array<Filter>>
+  getFiltersAsync(): Promise<Filter[]>
 
   /**
    * Moves and resizes dashboard objects.
@@ -63,15 +61,6 @@ export interface Dashboard extends Sheet {
   setDashboardObjectVisibilityAsync(
     dashboardObjectVisibilityMap: DashboardObjectVisibilityMap,
   ): Promise<void>
-
-  /**
-   * Sets the visibility of one or more floating dashboard zones.
-   * @param zoneVisibilityMap A map of zone ids to the desired state of visibility for that zone.
-   * @returns Empty promise that resolves when the visibility has been changed.
-   * @since 1.1.0
-   * @deprecated use setDashboardObjectVisibilityAsync
-   */
-  setZoneVisibilityAsync(zoneVisibilityMap: ZoneVisibilityMap): Promise<void>
 
   /**
    * Replays the last animation that occurred on the dashboard.

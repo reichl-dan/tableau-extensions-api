@@ -1,10 +1,10 @@
 import type * as Enums from '../enums/_enums'
-import type { Field } from './field'
-import type { TableSummary } from './tableSummary'
 import type { ConnectionSummary } from './connectionSummary'
-import type { DataTable } from './dataTable'
-import type { LogicalTable } from './logicalTable'
 import type { DataSourceUnderlyingDataOptions } from './dataSourceUnderlyingDataOptions'
+import type { DataTable } from './dataTable'
+import type { Field } from './field'
+import type { LogicalTable } from './logicalTable'
+import type { TableSummary } from './tableSummary'
 
 /**
  * Represents the data source used by a Worksheet.
@@ -17,7 +17,7 @@ export interface DataSource {
   id: string
 
   /** An array of fields associated with this data source. */
-  fields: Array<Field>
+  fields: Field[]
 
   /** Last update time of the data source's extract, or undefined if this data source is live. */
   extractUpdateTime: string | undefined
@@ -35,13 +35,13 @@ export interface DataSource {
    * Gets an array of table summary objects that are currently used in the data source.
    * @returns An array of table summary objects that are currently used in the data source.
    */
-  getActiveTablesAsync(): Promise<Array<TableSummary>>
+  getActiveTablesAsync(): Promise<TableSummary[]>
 
   /**
    * Gets an array of descriptions of the connections within this data source.
    * @returns An array of descriptions of the connections within this data source.
    */
-  getConnectionSummariesAsync(): Promise<Array<ConnectionSummary>>
+  getConnectionSummariesAsync(): Promise<ConnectionSummary[]>
 
   /**
    * Gets the underlying data table for the given logical table id.
@@ -61,7 +61,7 @@ export interface DataSource {
    * @returns An array of logical tables that are currently used in the data source.
    * @since 1.4.0
    */
-  getLogicalTablesAsync(): Promise<Array<LogicalTable>>
+  getLogicalTablesAsync(): Promise<LogicalTable[]>
 
   /**
    * Gets the underlying data for this data source

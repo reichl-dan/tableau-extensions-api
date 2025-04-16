@@ -1,5 +1,5 @@
-import type { Worksheet } from './worksheet'
 import type { TableauSheetEvent } from './tableauSheetEvent'
+import type { Worksheet } from './worksheet'
 
 /**
  * An event which is related to a particular Worksheet in the workbook.

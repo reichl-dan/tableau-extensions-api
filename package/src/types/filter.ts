@@ -29,7 +29,7 @@ export interface Filter {
    * Gets the list of worksheets where this filter is applied.
    * @returns A promise containing the list of worksheet names that have the filter applied.
    */
-  getAppliedWorksheetsAsync(): Promise<Array<string>>
+  getAppliedWorksheetsAsync(): Promise<string[]>
 
   /**
    * Gets the field for this filter.
@@ -43,5 +43,5 @@ export interface Filter {
    * @param applyToWorksheets List of worksheets to apply the filter on
    * @returns A promise containing the list of worksheet names that have the filter applied
    */
-  setAppliedWorksheetsAsync(applyToWorksheets: Array<string>): Promise<Array<string>>
+  setAppliedWorksheetsAsync(applyToWorksheets: string[]): Promise<string[]>
 }

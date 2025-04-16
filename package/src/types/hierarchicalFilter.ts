@@ -1,5 +1,6 @@
 import type { Filter } from './filter'
 import type { HierarchicalFilterDataValue } from './hierarchicalFilterDataValue'
+import type { HierarchicalLevelDetail } from './hierarchicalLevelDetail'
 
 /**
  * Hierarchical Filters are used when a hierarchical field is used as a filter on a cube database.
@@ -11,7 +12,7 @@ export interface HierarchicalFilter extends Filter {
   /**
    * A list of values applied to this hierarchical filter.
    */
-  appliedValues: Array<HierarchicalFilterDataValue>
+  appliedValues: HierarchicalFilterDataValue[]
 
   /**
    * The dimension name associated with the filter. In the ByCategory filter example, this would be 'Product'
@@ -32,7 +33,7 @@ export interface HierarchicalFilter extends Filter {
   /**
    * Details about each level in the hierarchical filter.
    */
-  levelDetails: Array<HierarchicalLevelDetail>
+  levelDetails: HierarchicalLevelDetail[]
 
   /**
    * The number of levels in the hierarchical filter. In the ByCategory filter example, this would be 5

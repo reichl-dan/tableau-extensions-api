@@ -1,5 +1,5 @@
-import type { TableauEvent } from './tableauEvent'
 import type { DashboardLayoutChangeDetails } from './dashboardLayoutChangeDetails'
+import type { TableauEvent } from './tableauEvent'
 
 /**
  * An event which is raised when the dashboard objects are modified. Should be listened for directly from the

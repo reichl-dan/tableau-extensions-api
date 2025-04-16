@@ -1,4 +1,5 @@
 import type * as Enums from '../enums/_enums'
+import type { DataSource } from './dataSource'
 
 /**
  * A field contains information about what data source it belongs to, its role, and the ability to fetch the domain values.

@@ -1,5 +1,5 @@
-import type { TableauWorksheetEvent } from './tableauWorksheetEvent'
 import type { Filter } from './filter'
+import type { TableauWorksheetEvent } from './tableauWorksheetEvent'
 
 export interface FilterChangedEvent extends TableauWorksheetEvent {
   /**

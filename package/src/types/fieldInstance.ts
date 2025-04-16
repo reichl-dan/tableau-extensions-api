@@ -1,6 +1,6 @@
 import type * as Enums from '../enums/_enums'
-import type { Field } from './field'
 import type { DataSource } from './dataSource'
+import type { Field } from './field'
 
 /**
  * Represents a field and its properties

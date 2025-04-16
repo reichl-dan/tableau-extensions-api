@@ -13,5 +13,5 @@ export interface CategoricalDomain {
   /**
    * The list of values in the domain of the filter
    */
-  values: Array<DataValue>
+  values: DataValue[]
 }

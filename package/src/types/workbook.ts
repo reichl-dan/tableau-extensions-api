@@ -10,5 +10,5 @@ export interface Workbook {
    * @returns All data sources used in this workbook.
    * @since 1.6.0 and Tableau 2021.3
    */
-  getAllDataSourcesAsync(): Promise<Array<DataSource>>
+  getAllDataSourcesAsync(): Promise<DataSource[]>
 }

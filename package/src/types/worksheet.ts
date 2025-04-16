@@ -1,17 +1,17 @@
 import type * as Enums from '../enums/_enums'
-import type { Sheet } from './sheet'
+import type { Annotation } from './annotation'
 import type { Dashboard } from './dashboard'
-import type { WorksheetFormatting } from './worksheetFormatting'
-import type { GetSummaryDataOptions } from './getSummaryDataOptions'
-import type { GetUnderlyingDataOptions } from './getUnderlyingDataOptions'
+import type { DataSource } from './dataSource'
 import type { DataTable } from './dataTable'
 import type { DataTableReader } from './dataTableReader'
-import type { DataSource } from './dataSource'
 import type { Filter } from './filter'
-import type { MarkInfo } from './markInfo'
+import type { GetSummaryDataOptions } from './getSummaryDataOptions'
+import type { GetUnderlyingDataOptions } from './getUnderlyingDataOptions'
 import type { LogicalTable } from './logicalTable'
+import type { MarkInfo } from './markInfo'
+import type { Sheet } from './sheet'
 import type { VisualSpecification } from './visualSpecification'
-import type { Annotation } from './annotation'
+import type { WorksheetFormatting } from './worksheetFormatting'
 
 /**
  * Represents a worksheet in Tableau.
@@ -35,7 +35,7 @@ export interface Worksheet extends Sheet {
   /**
    * Gets the annotations on the worksheet.
    */
-  getAnnotationsAsync(): Promise<Array<Annotation>>
+  getAnnotationsAsync(): Promise<Annotation[]>
 
   /**
    * Adds an annotation to a mark in the viz.
@@ -53,12 +53,12 @@ export interface Worksheet extends Sheet {
    * of the viz that your extension is added to. The method is not entirely asynchronous
    * and includes some serial operations.
    */
-  getDataSourcesAsync(): Promise<Array<DataSource>>
+  getDataSourcesAsync(): Promise<DataSource[]>
 
   /**
    * Gets the list of filters on a worksheet. Hierarchical filters are not yet supported.
    */
-  getFiltersAsync(): Promise<Array<Filter>>
+  getFiltersAsync(): Promise<Filter[]>
 
   /**
    * Gets the data for the marks which are currently highlighted on the worksheet.
@@ -76,7 +76,7 @@ export interface Worksheet extends Sheet {
    * Gets the columns that are returned with getSummaryDataAsync.
    * @since 1.5.0
    */
-  getSummaryColumnsInfoAsync(): Promise<Array<unknown>>
+  getSummaryColumnsInfoAsync(): Promise<unknown[]>
 
   /**
    * Gets the summary data table for this worksheet.
@@ -118,7 +118,7 @@ export interface Worksheet extends Sheet {
   /**
    * Gets an array of logical tables corresponding to the measures referenced by the worksheet.
    */
-  getUnderlyingTablesAsync(): Promise<Array<LogicalTable>>
+  getUnderlyingTablesAsync(): Promise<LogicalTable[]>
 
   /**
    * Gets the visual specification for the worksheet.
@@ -154,7 +154,7 @@ export interface Worksheet extends Sheet {
    * Selects the marks that have the specified values for the given field names.
    */
   selectMarksByValueAsync(options: {
-    [key: string]: Array<unknown>
+    [key: string]: unknown[]
   }): Promise<void>
 
   /**
@@ -162,7 +162,7 @@ export interface Worksheet extends Sheet {
    */
   applyFilterAsync(
     fieldName: string,
-    values: Array<unknown>,
+    values: unknown[],
     updateType: Enums.FilterUpdateType,
   ): Promise<void>
 
@@ -171,7 +171,7 @@ export interface Worksheet extends Sheet {
    */
   applyHierarchicalFilterAsync(
     fieldName: string,
-    values: Array<unknown>,
+    values: unknown[],
     updateType: Enums.FilterUpdateType,
   ): Promise<void>
 

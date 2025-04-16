@@ -15,3 +15,11 @@ export * from './enums/_enums'
 const tableau: Tableau = Reflect.get(window, 'tableau')
 Reflect.set(window, 'tableau', void 0)
 export default tableau
+
+// export commonly used objects
+export const extensions = tableau.extensions
+export const dashboard = tableau.extensions.dashboardContent.dashboard
+export const worksheet = tableau.extensions.worksheetContent.worksheet
+export const settings = tableau.extensions.settings
+export const environment = tableau.extensions.environment
+export const ui = tableau.extensions.ui

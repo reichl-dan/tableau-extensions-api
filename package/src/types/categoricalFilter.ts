@@ -10,7 +10,7 @@ export interface CategoricalFilter extends Filter {
   /**
    * A list of values applied to this categorical filter. Notice that if this is a dependent filter, the current relevant values can be fetched by calling getDomainAsync(tableau.FilterDomainType.Relevant).
    */
-  appliedValues: Array<DataValue>
+  appliedValues: DataValue[]
 
   /**
    * True if all the values are selected for this filter. When 'All' is selected, appliedValues returns an empty list.

@@ -8,5 +8,5 @@ export interface WorkbookFormatting {
   /**
    * An array of formatting sheets that contain the css properties for a tableau workbook.
    */
-  formattingSheets: Array<FormattingSheet>
+  formattingSheets: FormattingSheet[]
 }
