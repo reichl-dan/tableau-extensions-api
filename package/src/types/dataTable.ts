@@ -1,4 +1,3 @@
-import type * as Enums from '../enums/_enums'
 import type { Column } from './column'
 import type { DataValue } from './dataValue'
 import type { MarkInfo } from './markInfo'

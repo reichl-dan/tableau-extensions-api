@@ -6,15 +6,23 @@ import type { FieldInstance } from './fieldInstance'
  * @since 1.11.0
  */
 export interface Encoding {
-  /** Field and its properties */
+  /**
+   * Field and its properties
+   */
   field: FieldInstance
 
-  /** The unique representation of the encodings. This allows to identify the duplicate fields that are added to encodings. */
+  /**
+   * The unique representation of the encodings. This allows to identify the duplicate fields that are added to encodings.
+   */
   fieldEncodingId: string
 
-  /** inbuilt encoding type or the custom encoding */
+  /**
+   * inbuilt encoding type or the custom encoding
+   */
   id: string
 
-  /** type of the encoding */
+  /**
+   * type of the encoding
+   */
   type: Enums.EncodingType
 }

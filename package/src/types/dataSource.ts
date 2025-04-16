@@ -1,4 +1,3 @@
-import type * as Enums from '../enums/_enums'
 import type { ConnectionSummary } from './connectionSummary'
 import type { DataSourceUnderlyingDataOptions } from './dataSourceUnderlyingDataOptions'
 import type { DataTable } from './dataTable'
@@ -10,19 +9,29 @@ import type { TableSummary } from './tableSummary'
  * Represents the data source used by a Worksheet.
  */
 export interface DataSource {
-  /** The user friendly name of the data source as seen in the UI. */
+  /**
+   * The user friendly name of the data source as seen in the UI.
+   */
   name: string
 
-  /** Unique string representing this data source. */
+  /**
+   * Unique string representing this data source.
+   */
   id: string
 
-  /** An array of fields associated with this data source. */
+  /**
+   * An array of fields associated with this data source.
+   */
   fields: Field[]
 
-  /** Last update time of the data source's extract, or undefined if this data source is live. */
+  /**
+   * Last update time of the data source's extract, or undefined if this data source is live.
+   */
   extractUpdateTime: string | undefined
 
-  /** True if this data source is an extract, false otherwise. */
+  /**
+   * True if this data source is an extract, false otherwise.
+   */
   isExtract: boolean
 
   /**

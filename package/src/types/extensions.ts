@@ -9,25 +9,39 @@ import type { WorksheetContent } from './worksheetContent'
  * Base interface for Tableau Extensions
  */
 export interface Extensions {
-  /** Environment information */
+  /**
+   * Environment information
+   */
   environment: Environment
 
-  /** Settings management */
+  /**
+   * Settings management
+   */
   settings: Settings
 
-  /** UI utilities */
+  /**
+   * UI utilities
+   */
   ui: UI
 
-  /** The current workbook */
+  /**
+   * The current workbook
+   */
   workbook: Workbook
 
-  /** Dashboard content (only available for dashboard extensions) */
+  /**
+   * Dashboard content (only available for dashboard extensions)
+   */
   dashboardContent: DashboardContent
 
-  /** Dashboard object ID that corresponds to this extension instance */
+  /**
+   * Dashboard object ID that corresponds to this extension instance
+   */
   dashboardObjectId: number
 
-  /** Worksheet content (only available for viz extensions) */
+  /**
+   * Worksheet content (only available for viz extensions)
+   */
   worksheetContent: WorksheetContent
 
   /**
