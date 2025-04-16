@@ -1,10 +1,10 @@
 import {
-  extensions,
   dashboard,
-  worksheet,
-  settings,
   environment,
+  extensions,
+  settings,
   ui,
+  worksheet,
 } from 'tableau-extensions-api'
 
 console.log(extensions)
