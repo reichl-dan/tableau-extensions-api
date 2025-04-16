@@ -40,6 +40,9 @@ jobs:
       - name: Run tests
         run: pnpm run test
 
+      - name: Build package
+        run: pnpm run build
+
       - name: Validate package for publishing (Dry Run)
         run: pnpm publish --dry-run --filter tableau-extensions-api --no-git-checks
         env:
