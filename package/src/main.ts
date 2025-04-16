@@ -7,7 +7,6 @@ import '../vendor/tableau-extensions/tableau.extensions.1.latest.min.js'
 
 // export the tableau types
 export type Tableau = { extensions: Extensions } & typeof Enums
-export type EnumValue<T> = T[keyof T]
 export * from './types/_types'
 export * from './enums/_enums'
 
