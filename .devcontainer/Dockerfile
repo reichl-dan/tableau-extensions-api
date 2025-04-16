@@ -2,7 +2,7 @@ FROM mcr.microsoft.com/vscode/devcontainers/base:bookworm
 
 # Define build arguments
 ARG USERNAME=vscode
-ARG NODE_VERSION=22
+ARG NODE_VERSION=23
 
 # Set environment variables
 ENV DEBIAN_FRONTEND=noninteractive \
