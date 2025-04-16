@@ -1,6 +1,6 @@
 {
   "name": "tableau-extensions-api",
-  "version": "0.0.4",
+  "version": "1.13.0",
   "description": "A wrapper around the Tableau Extensions API",
   "author": "Dan Reichl <reichl.daniel.p@gmail.com>",
   "license": "MIT",
