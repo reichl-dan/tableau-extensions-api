@@ -1,5 +1,4 @@
-import type { TableauEvent } from './tableauEvent'
-import type { WorkbookFormatting } from './workbookFormatting'
+import type { TableauEvent, WorkbookFormatting } from './_types'
 
 /**
  * An event which is related to a workbook's formatting (worksheet, dashboard, story) in the workbook.

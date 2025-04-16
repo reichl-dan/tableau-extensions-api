@@ -1,4 +1,4 @@
-import type { FormattingSheet } from './formattingSheet'
+import type { FormattingSheet } from './_types'
 
 /**
  * The Workbook formatting contains an array of Formatting sheets. Each of these sheets can be identified by the ClassNameKey and contains the CSS properties needed to mimic the formatting on your workbook.

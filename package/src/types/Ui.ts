@@ -1,4 +1,4 @@
-import type { DialogOptions } from './dialogOptions'
+import type { DialogOptions } from './_types'
 
 /**
  * The UI namespace contains methods that allow an extension to display a popup dialog window.

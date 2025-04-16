@@ -1,4 +1,4 @@
-import type { WorkbookFormatting } from './workbookFormatting'
+import type { WorkbookFormatting } from './_types'
 
 /**
  * Alias for WorkbookFormatting.

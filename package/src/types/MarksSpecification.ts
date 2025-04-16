@@ -1,5 +1,5 @@
 import type * as Enums from '../enums/_enums'
-import type { Encoding } from './encoding'
+import type { Encoding } from './_types'
 
 /**
  * @since 1.11.0 Represents a collection of fields on various encodings for a single marks card

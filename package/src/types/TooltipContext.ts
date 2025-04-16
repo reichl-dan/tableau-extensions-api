@@ -1,4 +1,4 @@
-import type { Point } from './point'
+import type { Point } from './_types'
 
 /**
  * Provides the necessary information for how to display a Tableau tooltip.

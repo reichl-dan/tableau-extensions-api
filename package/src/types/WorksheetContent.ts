@@ -1,4 +1,4 @@
-import type { Worksheet } from './worksheet'
+import type { Worksheet } from './_types'
 
 /**
  * The WorksheetContent namespace is the namespace associated with Viz Extensions.

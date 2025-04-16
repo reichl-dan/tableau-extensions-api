@@ -1,6 +1,5 @@
 import type * as Enums from '../enums/_enums'
-import type { TableauEventHandlerFn } from './tableauEventHandlerFn'
-import type { TableauEventUnregisterFn } from './tableauEventUnregisterFn'
+import type { TableauEventHandlerFn, TableauEventUnregisterFn } from './_types'
 
 /**
  * Interface for handling registering and unregistering event listeners. Different objects will implement this interface to manage their event handling.

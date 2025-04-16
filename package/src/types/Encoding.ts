@@ -1,5 +1,5 @@
 import type * as Enums from '../enums/_enums'
-import type { FieldInstance } from './fieldInstance'
+import type { FieldInstance } from './_types'
 
 /**
  * Represents a single field and its associated encoding on a marks card

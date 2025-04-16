@@ -1,8 +1,5 @@
 import type * as Enums from '../enums/_enums'
-import type { Dashboard } from './dashboard'
-import type { Point } from './point'
-import type { Size } from './size'
-import type { Worksheet } from './worksheet'
+import type { Dashboard, Point, Size, Worksheet } from './_types'
 
 /**
  * An object of a dashboard.

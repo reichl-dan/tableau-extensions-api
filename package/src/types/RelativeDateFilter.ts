@@ -1,6 +1,5 @@
 import type * as Enums from '../enums/_enums'
-import type { DataValue } from './dataValue'
-import type { Filter } from './filter'
+import type { DataValue, Filter } from './_types'
 
 /**
  * Represents a relative date filter in Tableau

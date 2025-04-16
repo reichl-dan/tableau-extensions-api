@@ -1,5 +1,4 @@
-import type { Parameter } from './parameter'
-import type { TableauEvent } from './tableauEvent'
+import type { Parameter, TableauEvent } from './_types'
 
 /**
  * An event which is raised when the value of a parameter changes.

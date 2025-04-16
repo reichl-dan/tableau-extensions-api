@@ -1,4 +1,4 @@
-import type { TableauEvent } from './tableauEvent'
+import type { TableauEvent } from './_types'
 
 /**
  * Callback function which will be invoked when an event notification is emitted.

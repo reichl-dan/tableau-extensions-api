@@ -1,5 +1,5 @@
 import type * as Enums from '../enums/_enums'
-import type { Field } from './field'
+import type { Field } from './_types'
 
 /**
  * Represents a filter in Tableau.

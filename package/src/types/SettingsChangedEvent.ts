@@ -1,4 +1,4 @@
-import type { TableauEvent } from './tableauEvent'
+import type { TableauEvent } from './_types'
 
 /**
  * An event which is raised when the settings of an extension are updated.

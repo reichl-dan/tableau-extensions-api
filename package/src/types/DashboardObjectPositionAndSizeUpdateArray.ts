@@ -1,4 +1,4 @@
-import type { DashboardObjectPositionAndSizeUpdate } from './dashboardObjectPositionAndSizeUpdate'
+import type { DashboardObjectPositionAndSizeUpdate } from './_types'
 
 export type DashboardObjectPositionAndSizeUpdateArray =
   DashboardObjectPositionAndSizeUpdate[]

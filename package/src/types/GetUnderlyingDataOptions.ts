@@ -1,4 +1,4 @@
-import type { GetSummaryDataOptions } from './getSummaryDataOptions'
+import type { GetSummaryDataOptions } from './_types'
 
 /**
  * Options argument for the Worksheet.getUnderlyingTableDataAsync API.

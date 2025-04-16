@@ -1,4 +1,4 @@
-import type { DataTable } from './dataTable'
+import type { DataTable } from './_types'
 
 /**
  * Represents a collection of marks on a viz. This collection could be marks that are either selected or highlighted.

@@ -1,4 +1,4 @@
-import type { Dashboard } from './dashboard'
+import type { Dashboard } from './_types'
 
 /**
  * The DashboardContent namespace is the namespace associated with Dashboard Extensions.

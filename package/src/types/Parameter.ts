@@ -1,7 +1,9 @@
 import type * as Enums from '../enums/_enums'
-import type { DataValue } from './dataValue'
-import type { EventListenerManager } from './eventListenerManager'
-import type { ParameterDomainRestriction } from './parameterDomainRestriction'
+import type {
+  DataValue,
+  EventListenerManager,
+  ParameterDomainRestriction,
+} from './_types'
 
 /**
  * Represents a parameter in Tableau and provides ways to introspect the parameter and change its values.

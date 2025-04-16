@@ -1,7 +1,5 @@
 import type * as Enums from '../enums/_enums'
-import type { DataValue } from './dataValue'
-import type { Filter } from './filter'
-import type { RangeDomain } from './rangeDomain'
+import type { DataValue, Filter, RangeDomain } from './_types'
 
 /**
  * A Range Filter

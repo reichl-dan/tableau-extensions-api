@@ -1,5 +1,5 @@
 import type * as Enums from '../enums/_enums'
-import type { WorkbookFormatting } from './workbookFormatting'
+import type { WorkbookFormatting } from './_types'
 
 /**
  * The environment namespace provides a way to programmatically gather information about

@@ -1,4 +1,4 @@
-import type { DataSource } from './dataSource'
+import type { DataSource } from './_types'
 
 /**
  * The Workbook represents the currently open workbook.

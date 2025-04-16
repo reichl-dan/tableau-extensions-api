@@ -1,6 +1,6 @@
 // import types
 import type * as Enums from './enums/_enums'
-import type { Extensions } from './types/extensions'
+import type { Extensions } from './types/_types'
 
 // import tableau extension api
 import '../vendor/tableau-extensions/tableau.extensions.1.latest.min.js'

@@ -1,7 +1,5 @@
 import type * as Enums from '../enums/_enums'
-import type { EventListenerManager } from './eventListenerManager'
-import type { Parameter } from './parameter'
-import type { Size } from './size'
+import type { EventListenerManager, Parameter, Size } from './_types'
 
 /**
  * Represents a sheet (worksheet or dashboard) in a Tableau workbook.

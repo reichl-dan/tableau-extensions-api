@@ -1,7 +1,5 @@
 import type * as Enums from '../enums/_enums'
-import type { CategoricalDomain } from './categoricalDomain'
-import type { DataValue } from './dataValue'
-import type { Filter } from './filter'
+import type { CategoricalDomain, DataValue, Filter } from './_types'
 
 /**
  * A Categorical Filter

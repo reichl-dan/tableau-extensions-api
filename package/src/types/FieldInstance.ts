@@ -1,4 +1,4 @@
-import type { Field } from './field'
+import type { Field } from './_types'
 
 /**
  * Represents a field and its properties

@@ -1,6 +1,8 @@
-import type { Filter } from './filter'
-import type { HierarchicalFilterDataValue } from './hierarchicalFilterDataValue'
-import type { HierarchicalLevelDetail } from './hierarchicalLevelDetail'
+import type {
+  Filter,
+  HierarchicalFilterDataValue,
+  HierarchicalLevelDetail,
+} from './_types'
 
 /**
  * Hierarchical Filters are used when a hierarchical field is used as a filter on a cube database.

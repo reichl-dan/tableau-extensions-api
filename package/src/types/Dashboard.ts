@@ -1,10 +1,12 @@
 import type * as Enums from '../enums/_enums'
-import type { DashboardObject } from './dashboardObject'
-import type { DashboardObjectPositionAndSizeUpdateArray } from './dashboardObjectPositionAndSizeUpdateArray'
-import type { DashboardObjectVisibilityMap } from './dashboardObjectVisibilityMap'
-import type { Filter } from './filter'
-import type { Sheet } from './sheet'
-import type { Worksheet } from './worksheet'
+import type {
+  DashboardObject,
+  DashboardObjectPositionAndSizeUpdateArray,
+  DashboardObjectVisibilityMap,
+  Filter,
+  Sheet,
+  Worksheet,
+} from './_types'
 
 /**
  * Represents a dashboard in Tableau.

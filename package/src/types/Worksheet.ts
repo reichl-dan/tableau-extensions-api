@@ -1,17 +1,19 @@
 import type * as Enums from '../enums/_enums'
-import type { Annotation } from './annotation'
-import type { Dashboard } from './dashboard'
-import type { DataSource } from './dataSource'
-import type { DataTable } from './dataTable'
-import type { DataTableReader } from './dataTableReader'
-import type { Filter } from './filter'
-import type { GetSummaryDataOptions } from './getSummaryDataOptions'
-import type { GetUnderlyingDataOptions } from './getUnderlyingDataOptions'
-import type { LogicalTable } from './logicalTable'
-import type { MarkInfo } from './markInfo'
-import type { Sheet } from './sheet'
-import type { VisualSpecification } from './visualSpecification'
-import type { WorksheetFormatting } from './worksheetFormatting'
+import type {
+  Annotation,
+  Dashboard,
+  DataSource,
+  DataTable,
+  DataTableReader,
+  Filter,
+  GetSummaryDataOptions,
+  GetUnderlyingDataOptions,
+  LogicalTable,
+  MarkInfo,
+  Sheet,
+  VisualSpecification,
+  WorksheetFormatting,
+} from './_types'
 
 /**
  * Represents a worksheet in Tableau.

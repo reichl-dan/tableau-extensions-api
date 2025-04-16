@@ -1,9 +1,11 @@
-import type { DashboardContent } from './dashboardContent'
-import type { Environment } from './environment'
-import type { Settings } from './settings'
-import type { UI } from './ui'
-import type { Workbook } from './workbook'
-import type { WorksheetContent } from './worksheetContent'
+import type {
+  DashboardContent,
+  Environment,
+  Settings,
+  UI,
+  Workbook,
+  WorksheetContent,
+} from './_types'
 
 /**
  * Base interface for Tableau Extensions

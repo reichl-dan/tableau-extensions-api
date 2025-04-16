@@ -1,5 +1,4 @@
-import type { TableauWorksheetEvent } from './tableauWorksheetEvent'
-import type { WorksheetFormatting } from './worksheetFormatting'
+import type { TableauWorksheetEvent, WorksheetFormatting } from './_types'
 
 /**
  * An event raised when the worksheet's formatting changes. Note that this event is also raised when the workbook's formatting changes.

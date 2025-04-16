@@ -1,5 +1,4 @@
-import type { FieldInstance } from './fieldInstance'
-import type { MarksSpecification } from './marksSpecification'
+import type { FieldInstance, MarksSpecification } from './_types'
 
 /**
  * Represents a collection of fields on various encodings as well as other viz specific information for a worksheet

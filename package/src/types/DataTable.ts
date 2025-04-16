@@ -1,6 +1,4 @@
-import type { Column } from './column'
-import type { DataValue } from './dataValue'
-import type { MarkInfo } from './markInfo'
+import type { Column, DataValue, MarkInfo } from './_types'
 
 /**
  * Represents a data table in Tableau containing columns and data values

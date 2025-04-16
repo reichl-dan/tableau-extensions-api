@@ -1,4 +1,4 @@
-import type { EventListenerManager } from './eventListenerManager'
+import type { EventListenerManager } from './_types'
 
 /**
  * The settings namespace is used to get and set settings values. You can use the settings to configure your extension. The setting values are be persisted in a workbook.

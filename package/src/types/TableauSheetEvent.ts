@@ -1,5 +1,4 @@
-import type { Sheet } from './sheet'
-import type { TableauEvent } from './tableauEvent'
+import type { Sheet, TableauEvent } from './_types'
 
 /**
  * An event which is related to a particular Sheet (worksheet, dashboard, story) in the workbook.

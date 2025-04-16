@@ -1,9 +1,11 @@
-import type { ConnectionSummary } from './connectionSummary'
-import type { DataSourceUnderlyingDataOptions } from './dataSourceUnderlyingDataOptions'
-import type { DataTable } from './dataTable'
-import type { Field } from './field'
-import type { LogicalTable } from './logicalTable'
-import type { TableSummary } from './tableSummary'
+import type {
+  ConnectionSummary,
+  DataSourceUnderlyingDataOptions,
+  DataTable,
+  Field,
+  LogicalTable,
+  TableSummary,
+} from './_types'
 
 /**
  * Represents the data source used by a Worksheet.

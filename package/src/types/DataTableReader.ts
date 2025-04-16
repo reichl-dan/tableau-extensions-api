@@ -1,4 +1,4 @@
-import type { DataTable } from './dataTable'
+import type { DataTable } from './_types'
 
 /**
  * A DataTableReader allows iteration over summary or underlying data by pages. The page size is established when the DataTableReader is created.

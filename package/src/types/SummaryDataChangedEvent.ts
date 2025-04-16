@@ -1,4 +1,4 @@
-import type { TableauWorksheetEvent } from './tableauWorksheetEvent'
+import type { TableauWorksheetEvent } from './_types'
 
 /**
  * An event which is raised when summary data is changed for a worksheet or when a worksheet's data source is refreshed

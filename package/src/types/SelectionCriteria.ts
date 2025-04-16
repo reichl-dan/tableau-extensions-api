@@ -1,5 +1,4 @@
-import type { CategoricalValue } from './categoricalValue'
-import type { RangeValue } from './rangeValue'
+import type { CategoricalValue, RangeValue } from './_types'
 
 /**
  * SelectionCriteria interface is used to specify to the fieldName to values for Hierarchical, Categorical and Range based selections.
