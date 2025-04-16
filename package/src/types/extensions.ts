@@ -1,27 +1,34 @@
+import type { DashboardContent } from './dashboardContent'
+import type { Environment } from './environment'
+import type { Settings } from './settings'
+import type { UI } from './ui'
+import type { Workbook } from './workbook'
+import type { WorksheetContent } from './worksheetContent'
+
 /**
  * Base interface for Tableau Extensions
  */
-export interface TableauExtensions {
+export interface Extensions {
   /** Environment information */
-  environment: object
+  environment: Environment
 
   /** Settings management */
-  settings: object
+  settings: Settings
 
   /** UI utilities */
-  ui: object
+  ui: UI
 
   /** The current workbook */
-  workbook: object
+  workbook: Workbook
 
   /** Dashboard content (only available for dashboard extensions) */
-  dashboardContent: object
+  dashboardContent: DashboardContent
 
   /** Dashboard object ID that corresponds to this extension instance */
   dashboardObjectId: number
 
   /** Worksheet content (only available for viz extensions) */
-  worksheetContent: object
+  worksheetContent: WorksheetContent
 
   /**
    * Initializes the Extensions API. This function must be called before using any other Extensions API functions.
