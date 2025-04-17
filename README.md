@@ -1,4 +1,4 @@
-# tableau-extensions-api
+# Tableau Extensions API
 
 A wrapper around the Tableau Extensions API that exposes `tableau` as a module instead of relying on `window.tableau`. Includes TypeScript type declarations from the official Tableau Extensions API.
 
@@ -15,6 +15,63 @@ import tableau from 'tableau-extensions-api'
 
 await tableau.extensions.initializeAsync()
 ```
+
+## Additional Usage Details
+
+The `tableau-extensions-api` package provides convenient access to commonly used objects and types from the Tableau Extensions API. Below are additional details about its usage:
+
+### Commonly Used Objects
+
+The following objects are exported for direct use, eliminating the need to access them via `tableau.extensions.NAMESPACE`:
+
+- `extensions`: The main Extensions interface.
+- `dashboard`: Access to the dashboard content.
+- `worksheet`: Access to the worksheet content.
+- `settings`: Access to the settings interface.
+- `environment`: Access to the environment interface.
+- `ui`: Access to the UI interface.
+
+These objects can be imported as follows:
+
+```js
+import { extensions, dashboard, worksheet, settings, environment, ui } from 'tableau-extensions-api'
+
+await extensions.initializeAsync()
+console.log(dashboard.name)
+```
+
+### Importing the Tableau Object
+
+The `tableau` object is available as the default export of the package. It provides access to all enums and other global objects from the Tableau Extensions API. For example:
+
+```typescript
+import tableau from 'tableau-extensions-api'
+
+console.log(tableau.extensions)
+console.log(tableau.FilterType.Categorical)
+```
+
+This approach ensures compatibility and simplifies access to enums and other global objects.
+
+### TypeScript Types and Enums
+
+The package also exports all global types and enums from the Tableau Extensions API. These can be imported using TypeScript's `import type` feature:
+
+```typescript
+import type * as Enums from 'tableau-extensions-api'
+import type { Field, Filter } from 'tableau-extensions-api'
+
+const filterType: Enums.FilterType = tableau.FilterType.Categorical
+console.log(filterType)
+
+const field: Field = { /* ... */ }
+console.log(field)
+
+const filter: Filter = { /* ... */ }
+console.log(filter)
+```
+
+This allows for strong typing and better development experience when working with the Tableau Extensions API.
 
 ## Related Resources
 

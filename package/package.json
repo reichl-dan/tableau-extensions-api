@@ -1,6 +1,6 @@
 {
   "name": "tableau-extensions-api",
-  "version": "1.13.0",
+  "version": "1.13.1",
   "description": "A wrapper around the Tableau Extensions API",
   "author": "Dan Reichl <reichl.daniel.p@gmail.com>",
   "license": "MIT",
@@ -18,6 +18,9 @@
     "ci": "biome ci . && tsc --noEmit",
     "clean": "rm -rf node_modules dist",
     "prebuild": "rm -rf dist"
+  },
+  "dependencies": {
+    "@tableau/extensions-api-types": "^1.13.0"
   },
   "devDependencies": {
     "typescript": "5.8.2"

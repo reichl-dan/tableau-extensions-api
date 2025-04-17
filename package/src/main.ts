@@ -1,24 +1,22 @@
-// import types
-import type * as Enums from './enums/_enums'
-import type { Extensions } from './types/_types'
-
-// import tableau extension api
+/**
+ * Import the Tableau Extension API
+ */
 import '../vendor/tableau-extensions/tableau.extensions.1.latest.min.js'
 
-// export the tableau types
-export type Tableau = { extensions: Extensions } & typeof Enums
-export * from './types/_types'
-export * from './enums/_enums'
-
-// export the tableau object
-const tableau: Tableau = Reflect.get(window, 'tableau')
-Reflect.set(window, 'tableau', void 0)
+/**
+ * Export the Tableau Types and global object
+ */
+export * from './typed'
 export default tableau
 
-// export commonly used objects
+/**
+ * Export commonly used objects within the Tableau global object
+ */
 export const extensions = tableau.extensions
-export const dashboard = tableau.extensions.dashboardContent.dashboard
-export const worksheet = tableau.extensions.worksheetContent.worksheet
+// biome-ignore lint/style/noNonNullAssertion: user is expected to know if dashboard object exists
+export const dashboard = tableau.extensions.dashboardContent?.dashboard!
+// biome-ignore lint/style/noNonNullAssertion: user is expected to know if worksheet object exists
+export const worksheet = tableau.extensions.worksheetContent?.worksheet!
 export const settings = tableau.extensions.settings
 export const environment = tableau.extensions.environment
 export const ui = tableau.extensions.ui

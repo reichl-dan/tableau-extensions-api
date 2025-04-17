@@ -13,6 +13,10 @@ importers:
         version: 1.9.4
 
   package:
+    dependencies:
+      '@tableau/extensions-api-types':
+        specifier: ^1.13.0
+        version: 1.13.0
     devDependencies:
       typescript:
         specifier: 5.8.2
@@ -79,6 +83,12 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@tableau/extensions-api-types@1.13.0':
+    resolution: {integrity: sha512-z6PZfAHm5+wY1HzNZ8BoVR5+NhAS5oYPw9jsY4d8Ss6eirvaWWjfUK8tB+IyFrjsAhyAvdTkJAfGEziBuGcNXg==}
+
+  '@types/lodash@4.17.16':
+    resolution: {integrity: sha512-HX7Em5NYQAXKW+1T+FiuG27NGwzJfCX3s1GjOa7ujxZa52kjJLOr4FUxT+giF6Tgxv1e+/czV/iTtBw27WTU9g==}
+
   typescript@5.8.2:
     resolution: {integrity: sha512-aJn6wq13/afZp/jT9QZmwEjDqqvSGp1VT5GVg+f/t6/oVyrgXM6BY1h9BRh/O5p3PlUPAe+WuiEZOmb/49RqoQ==}
     engines: {node: '>=14.17'}
@@ -120,5 +130,11 @@ snapshots:
 
   '@biomejs/cli-win32-x64@1.9.4':
     optional: true
+
+  '@tableau/extensions-api-types@1.13.0':
+    dependencies:
+      '@types/lodash': 4.17.16
+
+  '@types/lodash@4.17.16': {}
 
   typescript@5.8.2: {}
