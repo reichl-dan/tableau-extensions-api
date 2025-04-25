@@ -73,6 +73,18 @@ console.log(filter)
 
 This allows for strong typing and better development experience when working with the Tableau Extensions API.
 
+## Contributing
+
+This project was developed individually to make it easier to work with the Tableau Extensions API. It is NOT officially maintained by Tableau. Contributions and bug reports are welcome!
+
+**How to contribute:**
+- Fork this repo and create a feature branch
+- Make your changes and include/update tests if needed
+- Follow existing code style and write clear commit messages
+- Open a pull request describing your changes
+
+For questions or issues, please open a GitHub issue with details.
+
 ## Related Resources
 
 - [Tableau Extensions API Guide](https://tableau.github.io/extensions-api/)
