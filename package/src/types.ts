@@ -1,5 +1,5 @@
 import type * as Types from '@tableau/extensions-api-types'
-export * from '@tableau/extensions-api-types'
+export type * from '@tableau/extensions-api-types'
 
 /**
  * Represents the type of event that can be listened for.

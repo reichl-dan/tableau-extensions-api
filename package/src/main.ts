@@ -6,7 +6,7 @@ import '../vendor/tableau-extensions/tableau.extensions.1.latest.min.js'
 /**
  * Export the Tableau Types and global object
  */
-export * from './typed'
+export type * from './types.js'
 export default tableau
 
 /**
