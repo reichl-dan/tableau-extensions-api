@@ -8,70 +8,101 @@ A wrapper around the Tableau Extensions API that exposes `tableau` as a module i
 npm install tableau-extensions-api
 ```
 
-## Usage
+## Quick Start
+
+The package provides convenient helper functions that automatically initialize the Tableau Extensions API:
+
+### Dashboard Extensions
 
 ```js
-import tableau from 'tableau-extensions-api'
+import { getDashboardExtension } from 'tableau-extensions-api'
 
-await tableau.extensions.initializeAsync()
-```
-
-## Additional Usage Details
-
-The `tableau-extensions-api` package provides convenient access to commonly used objects and types from the Tableau Extensions API. Below are additional details about its usage:
-
-### Commonly Used Objects
-
-The following objects are exported for direct use, eliminating the need to access them via `tableau.extensions.NAMESPACE`:
-
-- `extensions`: The main Extensions interface.
-- `dashboard`: Access to the dashboard content.
-- `worksheet`: Access to the worksheet content.
-- `settings`: Access to the settings interface.
-- `environment`: Access to the environment interface.
-- `ui`: Access to the UI interface.
-
-These objects can be imported as follows:
-
-```js
-import { extensions, dashboard, worksheet, settings, environment, ui } from 'tableau-extensions-api'
-
-await extensions.initializeAsync()
+// Automatically initializes and returns the dashboard object
+const dashboard = await getDashboardExtension()
 console.log(dashboard.name)
+console.log(dashboard.worksheets)
 ```
 
-### Importing the Tableau Object
+### Viz Extensions (Worksheet Extensions)
 
-The `tableau` object is available as the default export of the package. It provides access to all enums and other global objects from the Tableau Extensions API. For example:
+```js
+import { getWorksheetExtension } from 'tableau-extensions-api'
 
-```typescript
+// Automatically initializes and returns the worksheet object
+const worksheet = await getWorksheetExtension()
+console.log(worksheet.name)
+const data = await worksheet.getSummaryDataAsync()
+```
+
+### Extension Configuration
+
+```js
+import { getExtensionConfig } from 'tableau-extensions-api'
+
+// Automatically initializes and returns settings, environment, and UI objects
+const { settings, environment, ui } = await getExtensionConfig()
+console.log(environment.context) // 'dashboard' or 'worksheet'
+settings.set('myKey', 'myValue')
+await settings.saveAsync()
+```
+
+## Advanced Usage
+
+### Direct Access to Tableau Object
+
+The `tableau` object is still available as the default export for advanced use cases or when you need direct access to the Extensions API:
+
+```js
 import tableau from 'tableau-extensions-api'
 
-console.log(tableau.extensions)
+// Manual initialization (not required when using helper functions above)
+await tableau.extensions.initializeAsync()
+
+// Access to all enums and global objects
 console.log(tableau.FilterType.Categorical)
+console.log(tableau.extensions.environment.context)
 ```
 
-This approach ensures compatibility and simplifies access to enums and other global objects.
+### Error Handling
 
-### TypeScript Types and Enums
+The helper functions include built-in error handling for common scenarios:
 
-The package also exports all global types and enums from the Tableau Extensions API. These can be imported using TypeScript's `import type` feature:
+```js
+import { getDashboardExtension, getWorksheetExtension } from 'tableau-extensions-api'
+
+try {
+  // This will throw an error if not running in a dashboard extension context
+  const dashboard = await getDashboardExtension()
+} catch (error) {
+  console.error('Not running as dashboard extension:', error.message)
+}
+
+try {
+  // This will throw an error if not running in a viz extension context
+  const worksheet = await getWorksheetExtension()
+} catch (error) {
+  console.error('Not running as viz extension:', error.message)
+}
+```
+
+### TypeScript Support
+
+The package includes full TypeScript type definitions and exports all types from the Tableau Extensions API:
 
 ```typescript
-import type * as Enums from 'tableau-extensions-api'
-import type { Field, Filter } from 'tableau-extensions-api'
+import type { Dashboard, Worksheet, Parameter, Filter } from 'tableau-extensions-api'
+import { getDashboardExtension, getWorksheetExtension } from 'tableau-extensions-api'
 
-const filterType: Enums.FilterType = tableau.FilterType.Categorical
-console.log(filterType)
+// Fully typed objects
+const dashboard: Dashboard = await getDashboardExtension()
+const worksheet: Worksheet = await getWorksheetExtension()
 
-const field: Field = { /* ... */ }
-console.log(field)
+// Access to all Tableau types and enums
+import tableau, { type TableauEventType } from 'tableau-extensions-api'
 
-const filter: Filter = { /* ... */ }
-console.log(filter)
+const filterType = tableau.FilterType.Categorical
+const eventType: TableauEventType = 'filter-changed'
 ```
-
-This allows for strong typing and better development experience when working with the Tableau Extensions API.
 
 ## Related Resources
 

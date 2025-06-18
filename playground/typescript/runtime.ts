@@ -1,26 +1,12 @@
 import {
-  dashboard,
-  environment,
-  extensions,
-  settings,
-  ui,
-  worksheet,
+  getDashboardExtension,
+  getExtensionConfig,
+  getWorksheetExtension,
 } from 'tableau-extensions-api'
 
-console.log(extensions)
-console.log(dashboard)
-console.log(worksheet)
-console.log(settings)
-console.log(environment)
-console.log(ui)
-console.log(dashboard)
-
-function testTypes() {
-  return {
-    dashboardName: dashboard.name,
-    worksheetName: worksheet.name,
-    settings: settings.isModified,
-    environment: environment.apiVersion,
-    ui: ui.displayDialogAsync,
-  }
+async function testTypes() {
+  const config = await getExtensionConfig()
+  const dashboard = await getDashboardExtension()
+  const worksheet = await getWorksheetExtension()
+  return { config, dashboard, worksheet }
 }

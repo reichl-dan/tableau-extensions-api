@@ -1,3 +1,5 @@
+import * as ERRORS from './errors.js'
+
 /**
  * Import the Tableau Extension API
  */
@@ -6,17 +8,50 @@ import '../vendor/tableau-extensions/tableau.extensions.1.latest.min.js'
 /**
  * Export the Tableau Types and global object
  */
-export type * from './types.js'
+export * from './types.js'
 export default tableau
 
 /**
- * Export commonly used objects within the Tableau global object
+ * Boolean to indicate if the Tableau Extensions API has been initialized
  */
-export const extensions = tableau.extensions
-// biome-ignore lint/style/noNonNullAssertion: user is expected to know if dashboard object exists
-export const dashboard = tableau.extensions.dashboardContent?.dashboard!
-// biome-ignore lint/style/noNonNullAssertion: user is expected to know if worksheet object exists
-export const worksheet = tableau.extensions.worksheetContent?.worksheet!
-export const settings = tableau.extensions.settings
-export const environment = tableau.extensions.environment
-export const ui = tableau.extensions.ui
+let initialized = false
+
+/**
+ * Initialize the Tableau Extensions API if it hasn't been initialized yet
+ */
+async function initialize() {
+  if (initialized) return
+  await tableau.extensions.initializeAsync()
+  initialized = true
+}
+
+/**
+ * Returns the current dashboard object.
+ */
+export async function getDashboardExtension() {
+  await initialize()
+  const dashboard = tableau.extensions.dashboardContent?.dashboard
+  if (!dashboard) throw new Error(ERRORS.DASHBOARD_NOT_FOUND)
+  return dashboard
+}
+
+/**
+ * Returns the current worksheet object.
+ */
+export async function getWorksheetExtension() {
+  await initialize()
+  const worksheet = tableau.extensions.worksheetContent?.worksheet
+  if (!worksheet) throw new Error(ERRORS.WORKSHEET_NOT_FOUND)
+  return worksheet
+}
+
+/**
+ * Returns the extension configuration object.
+ */
+export async function getExtensionConfig() {
+  await initialize()
+  const settings = tableau.extensions.settings
+  const environment = tableau.extensions.environment
+  const ui = tableau.extensions.ui
+  return { settings, environment, ui }
+}
